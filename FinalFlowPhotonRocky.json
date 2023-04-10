@@ -1,0 +1,1667 @@
+[
+    {
+        "id": "5fbd3e1b28aee437",
+        "type": "victron-input-gps",
+        "z": "bf06e2c230089da7",
+        "service": "com.victronenergy.gps.ve_ttyACM0",
+        "path": "/Altitude",
+        "serviceObj": {
+            "service": "com.victronenergy.gps.ve_ttyACM0",
+            "name": "NMEA-0183 GPS (ACM0)",
+            "paths": [
+                {
+                    "path": "/Altitude",
+                    "type": "float",
+                    "name": "Altitude (m)"
+                },
+                {
+                    "path": "/Course",
+                    "type": "float",
+                    "name": "Course (Deg)"
+                },
+                {
+                    "path": "/Fix",
+                    "type": "integer",
+                    "name": "Fix"
+                },
+                {
+                    "path": "/NrOfSatellites",
+                    "type": "integer",
+                    "name": "Number of satellites"
+                },
+                {
+                    "path": "/Position/Latitude",
+                    "type": "float",
+                    "name": "Latitude (LAT)"
+                },
+                {
+                    "path": "/Position/Longitude",
+                    "type": "float",
+                    "name": "Longitude (LNG)"
+                },
+                {
+                    "path": "/Speed",
+                    "type": "float",
+                    "name": "Speed (m/s)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Altitude",
+            "type": "float",
+            "name": "Altitude (m)"
+        },
+        "name": "",
+        "x": 310,
+        "y": 1420,
+        "wires": [
+            [
+                "d79937123dae412d",
+                "91173fa035c8e64c"
+            ]
+        ]
+    },
+    {
+        "id": "6a97524a45731ecc",
+        "type": "victron-input-battery",
+        "z": "bf06e2c230089da7",
+        "service": "com.victronenergy.battery.ttyUSB0",
+        "path": "/Dc/0/Current",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyUSB0",
+            "name": "SmartShunt 500A/50mV",
+            "paths": [
+                {
+                    "path": "/Alarms/Alarm",
+                    "type": "enum",
+                    "name": "Alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighStarterVoltage",
+                    "type": "enum",
+                    "name": "High starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowStarterVoltage",
+                    "type": "enum",
+                    "name": "Low starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/MidVoltage",
+                    "type": "enum",
+                    "name": "Mid-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/Dc/1/Voltage",
+                    "type": "float",
+                    "name": "Starter battery voltage (V)"
+                },
+                {
+                    "path": "/History/AutomaticSyncs",
+                    "type": "float",
+                    "name": "Automatic syncs (count)"
+                },
+                {
+                    "path": "/History/AverageDischarge",
+                    "type": "float",
+                    "name": "Average discharge (Ah)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/ChargedEnergy",
+                    "type": "float",
+                    "name": "Charged Energy (kWh)"
+                },
+                {
+                    "path": "/History/DeepestDischarge",
+                    "type": "float",
+                    "name": "Deepest discharge (Ah)"
+                },
+                {
+                    "path": "/History/DischargedEnergy",
+                    "type": "float",
+                    "name": "Discharged Energy (kWh)"
+                },
+                {
+                    "path": "/History/FullDischarges",
+                    "type": "float",
+                    "name": "Full discharges (count)"
+                },
+                {
+                    "path": "/History/HighStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "High starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/HighVoltageAlarms",
+                    "type": "float",
+                    "name": "High voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LastDischarge",
+                    "type": "float",
+                    "name": "Last discharge (Ah)"
+                },
+                {
+                    "path": "/History/LowStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "Low starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LowVoltageAlarms",
+                    "type": "float",
+                    "name": "Low voltage alarms (count)"
+                },
+                {
+                    "path": "/History/MaximumStarterVoltage",
+                    "type": "float",
+                    "name": "Maximum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MaximumVoltage",
+                    "type": "float",
+                    "name": "Maximum voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumStarterVoltage",
+                    "type": "float",
+                    "name": "Minimum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumVoltage",
+                    "type": "float",
+                    "name": "Minimum voltage (V DC)"
+                },
+                {
+                    "path": "/History/TimeSinceLastFullCharge",
+                    "type": "float",
+                    "name": "Time since last full charge (seconds)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Relay/0/State",
+                    "type": "enum",
+                    "name": "Relay status",
+                    "enum": {
+                        "0": "Open",
+                        "1": "Closed"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/TimeToGo",
+                    "type": "float",
+                    "name": "Time to go (h)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Dc/0/Current",
+            "type": "float",
+            "name": "Current (A)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 310,
+        "y": 920,
+        "wires": [
+            [
+                "ee1de83b0543bac3",
+                "8b78a11460564679"
+            ]
+        ]
+    },
+    {
+        "id": "65cf364403f1e6af",
+        "type": "victron-input-battery",
+        "z": "bf06e2c230089da7",
+        "service": "com.victronenergy.battery.ttyUSB0",
+        "path": "/Dc/0/Voltage",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyUSB0",
+            "name": "SmartShunt 500A/50mV",
+            "paths": [
+                {
+                    "path": "/Alarms/Alarm",
+                    "type": "enum",
+                    "name": "Alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighStarterVoltage",
+                    "type": "enum",
+                    "name": "High starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowStarterVoltage",
+                    "type": "enum",
+                    "name": "Low starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/MidVoltage",
+                    "type": "enum",
+                    "name": "Mid-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/Dc/1/Voltage",
+                    "type": "float",
+                    "name": "Starter battery voltage (V)"
+                },
+                {
+                    "path": "/History/AutomaticSyncs",
+                    "type": "float",
+                    "name": "Automatic syncs (count)"
+                },
+                {
+                    "path": "/History/AverageDischarge",
+                    "type": "float",
+                    "name": "Average discharge (Ah)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/ChargedEnergy",
+                    "type": "float",
+                    "name": "Charged Energy (kWh)"
+                },
+                {
+                    "path": "/History/DeepestDischarge",
+                    "type": "float",
+                    "name": "Deepest discharge (Ah)"
+                },
+                {
+                    "path": "/History/DischargedEnergy",
+                    "type": "float",
+                    "name": "Discharged Energy (kWh)"
+                },
+                {
+                    "path": "/History/FullDischarges",
+                    "type": "float",
+                    "name": "Full discharges (count)"
+                },
+                {
+                    "path": "/History/HighStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "High starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/HighVoltageAlarms",
+                    "type": "float",
+                    "name": "High voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LastDischarge",
+                    "type": "float",
+                    "name": "Last discharge (Ah)"
+                },
+                {
+                    "path": "/History/LowStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "Low starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LowVoltageAlarms",
+                    "type": "float",
+                    "name": "Low voltage alarms (count)"
+                },
+                {
+                    "path": "/History/MaximumStarterVoltage",
+                    "type": "float",
+                    "name": "Maximum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MaximumVoltage",
+                    "type": "float",
+                    "name": "Maximum voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumStarterVoltage",
+                    "type": "float",
+                    "name": "Minimum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumVoltage",
+                    "type": "float",
+                    "name": "Minimum voltage (V DC)"
+                },
+                {
+                    "path": "/History/TimeSinceLastFullCharge",
+                    "type": "float",
+                    "name": "Time since last full charge (seconds)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Relay/0/State",
+                    "type": "enum",
+                    "name": "Relay status",
+                    "enum": {
+                        "0": "Open",
+                        "1": "Closed"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/TimeToGo",
+                    "type": "float",
+                    "name": "Time to go (h)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Dc/0/Voltage",
+            "type": "float",
+            "name": "Voltage (V)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 310,
+        "y": 980,
+        "wires": [
+            [
+                "aa914d7b7e8c17bd",
+                "32b59ec50f0813b2"
+            ]
+        ]
+    },
+    {
+        "id": "9b8deeb4eaed88bb",
+        "type": "victron-input-battery",
+        "z": "bf06e2c230089da7",
+        "service": "com.victronenergy.battery.ttyUSB0",
+        "path": "/Soc",
+        "serviceObj": {
+            "service": "com.victronenergy.battery.ttyUSB0",
+            "name": "SmartShunt 500A/50mV",
+            "paths": [
+                {
+                    "path": "/Alarms/Alarm",
+                    "type": "enum",
+                    "name": "Alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighStarterVoltage",
+                    "type": "enum",
+                    "name": "High starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighTemperature",
+                    "type": "enum",
+                    "name": "High battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/HighVoltage",
+                    "type": "enum",
+                    "name": "High voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowSoc",
+                    "type": "enum",
+                    "name": "Low state-of-charge alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowStarterVoltage",
+                    "type": "enum",
+                    "name": "Low starter-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowTemperature",
+                    "type": "enum",
+                    "name": "Low battery temperature alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/LowVoltage",
+                    "type": "enum",
+                    "name": "Low voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/Alarms/MidVoltage",
+                    "type": "enum",
+                    "name": "Mid-voltage alarm",
+                    "enum": {
+                        "0": "No alarm",
+                        "2": "Alarm"
+                    }
+                },
+                {
+                    "path": "/ConsumedAmphours",
+                    "type": "float",
+                    "name": "Consumed Amphours (Ah)"
+                },
+                {
+                    "path": "/Dc/0/Current",
+                    "type": "float",
+                    "name": "Current (A)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltage",
+                    "type": "float",
+                    "name": "Mid-point voltage of the battery bank (V)"
+                },
+                {
+                    "path": "/Dc/0/MidVoltageDeviation",
+                    "type": "float",
+                    "name": "Mid-point deviation of the battery bank (%)"
+                },
+                {
+                    "path": "/Dc/0/Temperature",
+                    "type": "float",
+                    "name": "Battery temperature (C)"
+                },
+                {
+                    "path": "/Dc/0/Voltage",
+                    "type": "float",
+                    "name": "Voltage (V)"
+                },
+                {
+                    "path": "/Dc/1/Voltage",
+                    "type": "float",
+                    "name": "Starter battery voltage (V)"
+                },
+                {
+                    "path": "/History/AutomaticSyncs",
+                    "type": "float",
+                    "name": "Automatic syncs (count)"
+                },
+                {
+                    "path": "/History/AverageDischarge",
+                    "type": "float",
+                    "name": "Average discharge (Ah)"
+                },
+                {
+                    "path": "/History/ChargeCycles",
+                    "type": "float",
+                    "name": "Charge cycles (count)"
+                },
+                {
+                    "path": "/History/ChargedEnergy",
+                    "type": "float",
+                    "name": "Charged Energy (kWh)"
+                },
+                {
+                    "path": "/History/DeepestDischarge",
+                    "type": "float",
+                    "name": "Deepest discharge (Ah)"
+                },
+                {
+                    "path": "/History/DischargedEnergy",
+                    "type": "float",
+                    "name": "Discharged Energy (kWh)"
+                },
+                {
+                    "path": "/History/FullDischarges",
+                    "type": "float",
+                    "name": "Full discharges (count)"
+                },
+                {
+                    "path": "/History/HighStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "High starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/HighVoltageAlarms",
+                    "type": "float",
+                    "name": "High voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LastDischarge",
+                    "type": "float",
+                    "name": "Last discharge (Ah)"
+                },
+                {
+                    "path": "/History/LowStarterVoltageAlarms",
+                    "type": "float",
+                    "name": "Low starter voltage alarms (count)"
+                },
+                {
+                    "path": "/History/LowVoltageAlarms",
+                    "type": "float",
+                    "name": "Low voltage alarms (count)"
+                },
+                {
+                    "path": "/History/MaximumStarterVoltage",
+                    "type": "float",
+                    "name": "Maximum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MaximumVoltage",
+                    "type": "float",
+                    "name": "Maximum voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumStarterVoltage",
+                    "type": "float",
+                    "name": "Minimum starter voltage (V DC)"
+                },
+                {
+                    "path": "/History/MinimumVoltage",
+                    "type": "float",
+                    "name": "Minimum voltage (V DC)"
+                },
+                {
+                    "path": "/History/TimeSinceLastFullCharge",
+                    "type": "float",
+                    "name": "Time since last full charge (seconds)"
+                },
+                {
+                    "path": "/History/TotalAhDrawn",
+                    "type": "float",
+                    "name": "Total Ah drawn (Ah)"
+                },
+                {
+                    "path": "/Relay/0/State",
+                    "type": "enum",
+                    "name": "Relay status",
+                    "enum": {
+                        "0": "Open",
+                        "1": "Closed"
+                    }
+                },
+                {
+                    "path": "/Soc",
+                    "type": "float",
+                    "name": "State of charge (%)"
+                },
+                {
+                    "path": "/TimeToGo",
+                    "type": "float",
+                    "name": "Time to go (h)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Soc",
+            "type": "float",
+            "name": "State of charge (%)"
+        },
+        "initial": "",
+        "name": "",
+        "x": 330,
+        "y": 1040,
+        "wires": [
+            [
+                "6d37aadc8c8bc099",
+                "1a2ab8165baf2a01"
+            ]
+        ]
+    },
+    {
+        "id": "b07c7feae72dc67a",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 18",
+        "func": "var id = flow.get('cartNum') || 0;\nvar time = flow.get('Time') || 0;\nvar voltage = flow.get('Voltage') || 0;\nvar current = flow.get('Current') || 0;\nvar soc = flow.get('SOC') || 0;\nvar long = flow.get('Longitude') || 0;\nvar lat = flow.get('Latitude') || 0;\nvar alt = flow.get('Altitude') || 0;\nvar speed = flow.get('Speed') || 0;\n\nmsg.payload = \"INSERT INTO battery_measurements (cartID,timestamp,battery_voltage,battery_current,battery_state_of_charge,cart_longitude,cart_latitude,altitude,speed) VALUES (\"+id+\",\"+time+\",\"+voltage+\",\"+current+\",\"+soc+\",\"+long+\",\"+lat+\",\"+alt+\",\"+speed+\");\"\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 1220,
+        "wires": [
+            [
+                "3949115e687082b6",
+                "c8576f24bde5e611"
+            ]
+        ]
+    },
+    {
+        "id": "50e04779fb49002e",
+        "type": "inject",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 490,
+        "y": 1180,
+        "wires": [
+            [
+                "ff2dfb4f41fc6779",
+                "8e611c3c848bf645"
+            ]
+        ]
+    },
+    {
+        "id": "ee1de83b0543bac3",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Current",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa914d7b7e8c17bd",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Voltage",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d37aadc8c8bc099",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SOC",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "42cb41504f13544d",
+        "type": "victron-input-gps",
+        "z": "bf06e2c230089da7",
+        "service": "com.victronenergy.gps.ve_ttyACM0",
+        "path": "/Position/Latitude",
+        "serviceObj": {
+            "service": "com.victronenergy.gps.ve_ttyACM0",
+            "name": "NMEA-0183 GPS (ACM0)",
+            "paths": [
+                {
+                    "path": "/Altitude",
+                    "type": "float",
+                    "name": "Altitude (m)"
+                },
+                {
+                    "path": "/Course",
+                    "type": "float",
+                    "name": "Course (Deg)"
+                },
+                {
+                    "path": "/Fix",
+                    "type": "integer",
+                    "name": "Fix"
+                },
+                {
+                    "path": "/NrOfSatellites",
+                    "type": "integer",
+                    "name": "Number of satellites"
+                },
+                {
+                    "path": "/Position/Latitude",
+                    "type": "float",
+                    "name": "Latitude (LAT)"
+                },
+                {
+                    "path": "/Position/Longitude",
+                    "type": "float",
+                    "name": "Longitude (LNG)"
+                },
+                {
+                    "path": "/Speed",
+                    "type": "float",
+                    "name": "Speed (m/s)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Position/Latitude",
+            "type": "float",
+            "name": "Latitude (LAT)"
+        },
+        "name": "",
+        "x": 320,
+        "y": 1360,
+        "wires": [
+            [
+                "41e508c5a010a6dd",
+                "65ab560e9c0a34d8"
+            ]
+        ]
+    },
+    {
+        "id": "1f115ab4f27e192f",
+        "type": "victron-input-gps",
+        "z": "bf06e2c230089da7",
+        "service": "com.victronenergy.gps.ve_ttyACM0",
+        "path": "/Position/Longitude",
+        "serviceObj": {
+            "service": "com.victronenergy.gps.ve_ttyACM0",
+            "name": "NMEA-0183 GPS (ACM0)",
+            "paths": [
+                {
+                    "path": "/Altitude",
+                    "type": "float",
+                    "name": "Altitude (m)"
+                },
+                {
+                    "path": "/Course",
+                    "type": "float",
+                    "name": "Course (Deg)"
+                },
+                {
+                    "path": "/Fix",
+                    "type": "integer",
+                    "name": "Fix"
+                },
+                {
+                    "path": "/NrOfSatellites",
+                    "type": "integer",
+                    "name": "Number of satellites"
+                },
+                {
+                    "path": "/Position/Latitude",
+                    "type": "float",
+                    "name": "Latitude (LAT)"
+                },
+                {
+                    "path": "/Position/Longitude",
+                    "type": "float",
+                    "name": "Longitude (LNG)"
+                },
+                {
+                    "path": "/Speed",
+                    "type": "float",
+                    "name": "Speed (m/s)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Position/Longitude",
+            "type": "float",
+            "name": "Longitude (LNG)"
+        },
+        "name": "",
+        "x": 330,
+        "y": 1300,
+        "wires": [
+            [
+                "f2bd37d19286d538",
+                "a04439d6ef4f4718"
+            ]
+        ]
+    },
+    {
+        "id": "f2bd37d19286d538",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Longitude",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41e508c5a010a6dd",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Latitude",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d79937123dae412d",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Altitude",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac436ee7edf5563d",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Speed",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "998fd96ef6b24a09",
+        "type": "victron-input-gps",
+        "z": "bf06e2c230089da7",
+        "service": "com.victronenergy.gps.ve_ttyACM0",
+        "path": "/Speed",
+        "serviceObj": {
+            "service": "com.victronenergy.gps.ve_ttyACM0",
+            "name": "NMEA-0183 GPS (ACM0)",
+            "paths": [
+                {
+                    "path": "/Altitude",
+                    "type": "float",
+                    "name": "Altitude (m)"
+                },
+                {
+                    "path": "/Course",
+                    "type": "float",
+                    "name": "Course (Deg)"
+                },
+                {
+                    "path": "/Fix",
+                    "type": "integer",
+                    "name": "Fix"
+                },
+                {
+                    "path": "/NrOfSatellites",
+                    "type": "integer",
+                    "name": "Number of satellites"
+                },
+                {
+                    "path": "/Position/Latitude",
+                    "type": "float",
+                    "name": "Latitude (LAT)"
+                },
+                {
+                    "path": "/Position/Longitude",
+                    "type": "float",
+                    "name": "Longitude (LNG)"
+                },
+                {
+                    "path": "/Speed",
+                    "type": "float",
+                    "name": "Speed (m/s)"
+                }
+            ]
+        },
+        "pathObj": {
+            "path": "/Speed",
+            "type": "float",
+            "name": "Speed (m/s)"
+        },
+        "name": "",
+        "x": 310,
+        "y": 1480,
+        "wires": [
+            [
+                "ac436ee7edf5563d",
+                "b7c210251c056121"
+            ]
+        ]
+    },
+    {
+        "id": "3949115e687082b6",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 20",
+        "func": "msg.queryParameters = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 1220,
+        "wires": [
+            [
+                "5174adb07cdd9fc1"
+            ]
+        ]
+    },
+    {
+        "id": "2fce8c4671ff5728",
+        "type": "ui_gauge",
+        "z": "bf06e2c230089da7",
+        "name": "Battery SOC",
+        "group": "3305f0f75d3eadfd",
+        "order": 1,
+        "width": 10,
+        "height": 4,
+        "gtype": "gage",
+        "title": "State Of Charge",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#b50000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 830,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "873a8e40bbe193ba",
+        "type": "ui_gauge",
+        "z": "bf06e2c230089da7",
+        "name": "Cart Voltage",
+        "group": "3305f0f75d3eadfd",
+        "order": 6,
+        "width": 10,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Voltage",
+        "label": "VOLTS",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "60",
+        "colors": [
+            "#b50000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 830,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "125462e3b319e5e2",
+        "type": "ui_gauge",
+        "z": "bf06e2c230089da7",
+        "name": "Battery Current",
+        "group": "3305f0f75d3eadfd",
+        "order": 7,
+        "width": 10,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Current",
+        "label": "AMPS",
+        "format": "{{value}}",
+        "min": "-50",
+        "max": "50",
+        "colors": [
+            "#b50000",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": true,
+        "className": "",
+        "x": 840,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a778ae7a6d1936e7",
+        "type": "ui_text",
+        "z": "bf06e2c230089da7",
+        "group": "3305f0f75d3eadfd",
+        "order": 3,
+        "width": 13,
+        "height": 1,
+        "name": "",
+        "label": "Longitude",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 960,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "bfd7c3a83e3d45a6",
+        "type": "ui_text",
+        "z": "bf06e2c230089da7",
+        "group": "3305f0f75d3eadfd",
+        "order": 2,
+        "width": 13,
+        "height": 1,
+        "name": "",
+        "label": "Latitude",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 960,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "7fb2dc4e34076fba",
+        "type": "ui_text",
+        "z": "bf06e2c230089da7",
+        "group": "3305f0f75d3eadfd",
+        "order": 4,
+        "width": 13,
+        "height": 1,
+        "name": "",
+        "label": "Altitude",
+        "format": "{{msg.payload}} ft",
+        "layout": "col-center",
+        "className": "",
+        "x": 960,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "e969390ecdb18d7a",
+        "type": "ui_gauge",
+        "z": "bf06e2c230089da7",
+        "name": "Cart Speed",
+        "group": "3305f0f75d3eadfd",
+        "order": 5,
+        "width": 13,
+        "height": 9,
+        "gtype": "gage",
+        "title": "Speed",
+        "label": "MPH",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "15",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 970,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "ff2dfb4f41fc6779",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cartNum",
+                "pt": "flow",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 1220,
+        "wires": [
+            [
+                "b07c7feae72dc67a"
+            ]
+        ]
+    },
+    {
+        "id": "8e611c3c848bf645",
+        "type": "change",
+        "z": "bf06e2c230089da7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Time",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8576f24bde5e611",
+        "type": "debug",
+        "z": "bf06e2c230089da7",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "b7c210251c056121",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 21",
+        "func": "var s = msg.payload;\nmsg.payload = parseFloat(s).toFixed(1)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1500,
+        "wires": [
+            [
+                "e969390ecdb18d7a"
+            ]
+        ]
+    },
+    {
+        "id": "8b78a11460564679",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 22",
+        "func": "var s = msg.payload;\nmsg.payload = parseFloat(s).toFixed(2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 840,
+        "wires": [
+            [
+                "125462e3b319e5e2"
+            ]
+        ]
+    },
+    {
+        "id": "32b59ec50f0813b2",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 23",
+        "func": "var r = msg.payload;\nmsg.payload = parseFloat(r).toFixed(2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 920,
+        "wires": [
+            [
+                "873a8e40bbe193ba"
+            ]
+        ]
+    },
+    {
+        "id": "1a2ab8165baf2a01",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 24",
+        "func": "var s = msg.payload;\nmsg.payload = parseFloat(s).toFixed(1)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 1000,
+        "wires": [
+            [
+                "2fce8c4671ff5728"
+            ]
+        ]
+    },
+    {
+        "id": "91173fa035c8e64c",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 25",
+        "func": "var s = msg.payload*3.28084;\nmsg.payload = parseFloat(s).toFixed(1)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1420,
+        "wires": [
+            [
+                "7fb2dc4e34076fba"
+            ]
+        ]
+    },
+    {
+        "id": "5174adb07cdd9fc1",
+        "type": "postgres",
+        "z": "bf06e2c230089da7",
+        "postgresdb": "04babc55b319993e",
+        "name": "",
+        "output": true,
+        "perrow": false,
+        "rowspermsg": "1",
+        "return_on_error": true,
+        "limit_queries": "0",
+        "limit_by": "payload",
+        "limit_value": "1",
+        "limit_drop_intermediate": false,
+        "limit_drop_if_in_queue": false,
+        "outputs": true,
+        "x": 1260,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65ab560e9c0a34d8",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 26",
+        "func": "var s = msg.payload;\nmsg.payload = parseFloat(s).toFixed(2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1360,
+        "wires": [
+            [
+                "bfd7c3a83e3d45a6"
+            ]
+        ]
+    },
+    {
+        "id": "a04439d6ef4f4718",
+        "type": "function",
+        "z": "bf06e2c230089da7",
+        "name": "function 27",
+        "func": "var s = msg.payload;\nmsg.payload = parseFloat(s).toFixed(2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1280,
+        "wires": [
+            [
+                "a778ae7a6d1936e7"
+            ]
+        ]
+    },
+    {
+        "id": "3305f0f75d3eadfd",
+        "type": "ui_group",
+        "name": "Battery",
+        "tab": "cda5db677ce03fc7",
+        "order": 1,
+        "disp": false,
+        "width": 23,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "04babc55b319993e",
+        "type": "postgresdb",
+        "cfgname": "fleetBase",
+        "hostname": "fleet-management-database.csg5vowywacr.us-east-2.rds.amazonaws.com",
+        "port": "5432",
+        "db": "postgres",
+        "ssl": false
+    },
+    {
+        "id": "cda5db677ce03fc7",
+        "type": "ui_tab",
+        "name": "Photon Rocky",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
